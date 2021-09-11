@@ -2,10 +2,17 @@
   <a href="https://github.com/krishnadaspalode/obfuscate-with-gulp-libraries" target="_blank">
     <img src="https://github.com/krishnadaspalode/obfuscate-with-gulp-libraries/blob/main/assets/logo.png" alt="" title="" width="80">
     <br/>
-    <h2>Advanced level javascript code obfuscation with gulp libraries</h2>
+    <h2 align="center">Advanced Javascript Code Obfuscation With Gulp Obfuscation Libraries</h2>
   </a>
 </p>
-
+<br/>
+<p align="center">
+    <img src="https://github.com/krishnadaspalode/obfuscate-with-gulp-libraries/blob/main/assets/gulp.png" alt="" title="" width="80%">
+</p>
+<br/>
+<p align="center">
+    <img src="https://github.com/krishnadaspalode/obfuscate-with-gulp-libraries/blob/main/assets/gulp-architecture.png.png" alt="" title="" width="80%">
+</p>
 Javascript compiled code which gets rendered in browser is always having a threat/security concerns. It can reveal the underline source code and an attacker can easily exploit our application stability. Javascript client based applications can overcome this by obfuscating compiled code to non-readble/parsable formats. We have many libraries to achieve the same.
 
 ## 📢 Result
