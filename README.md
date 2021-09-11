@@ -6,14 +6,22 @@
   </a>
 </p>
 <br/>
+Javascript compiled code which gets rendered in browser is always having a threat/security concerns. It can reveal the underline source code and an attacker can easily exploit our application stability. Javascript client based applications can overcome this by obfuscating compiled code to non-readble/parsable formats. We have many libraries to achieve the same.
+
+<h3 align="center">Javascript Gulp Libraires</h3>
+
+Gulp tasks carry out read files from file system and do support modify the files and write into destination.
+<br/>
 <p align="center">
     <img src="https://github.com/krishnadaspalode/obfuscate-with-gulp-libraries/blob/main/assets/gulp.png" alt="" title="" width="80%">
 </p>
 <br/>
+Gulp libraries are capable of combining files then uglify, minify, obfuscate and write as in readbale format to destination
+<br/>
 <p align="center">
-    <img src="https://github.com/krishnadaspalode/obfuscate-with-gulp-libraries/blob/main/assets/gulp-architecture.png.png" alt="" title="" width="80%">
+    <img src="https://github.com/krishnadaspalode/obfuscate-with-gulp-libraries/blob/main/assets/gulp-architecture.png" alt="" title="" width="80%">
 </p>
-Javascript compiled code which gets rendered in browser is always having a threat/security concerns. It can reveal the underline source code and an attacker can easily exploit our application stability. Javascript client based applications can overcome this by obfuscating compiled code to non-readble/parsable formats. We have many libraries to achieve the same.
+
 
 ## 📢 Result
 <p align="center">
@@ -113,7 +121,7 @@ The library reference URL have all the properties here: https://github.com/javas
 
 ```sh
 gulp.task('obfuscate-app', function () {
-    del.sync(['min.js',], {force: true});                   // to delete previous compiled data
+    del.sync(['min.js',], {force: true})                   // to delete previous compiled data
     gulp.src(['app/app.js', 'app/**utils**/**/*.js'])       //read all js files in the application
         .pipe(sourcemaps.init())
         .pipe(concat('min.js'))
