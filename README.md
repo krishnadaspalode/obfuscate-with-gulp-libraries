@@ -10,7 +10,7 @@ Javascript compiled code which gets rendered in browser is always having a threa
 
 ## 📢 Result
 <p align="center">
-    <img src="https://github.com/krishnadaspalode/obfuscate-with-gulp-libraries/blob/main/result/result.png" alt="" title="" width="80">
+    <img src="https://github.com/krishnadaspalode/obfuscate-with-gulp-libraries/blob/main/result/result.png" alt="" title="" width="80%">
 </p>
 
 Gulp feature basically performing wrapping up of all the JS files, html files, CSS/SCSS files in the code base to mnified files. The minfied file will not be readable or parsable as given above.
@@ -95,7 +95,7 @@ var obfuscatorSettings = {
     stringArrayThreshold: 0.75,
     transformObjectKeys: false,
     unicodeEscapeSequence: false
-};
+}
 ```
 
 The library reference URL have all the properties here: https://github.com/javascript-obfuscator/javascript-obfuscator
@@ -111,7 +111,7 @@ gulp.task('obfuscate-app', function () {
         .pipe(sourcemaps.init())
         .pipe(concat('min.js'))
         .pipe(uglify({ mangle: true, compress: true }))     //uglify
-        .pipe(sourcemaps.init())
+        .pipe(sourcemaps.init())                            
         .pipe(concat('min.js'))                             //concatenate the files
         .pipe(minify({
             ext: {
@@ -127,10 +127,20 @@ gulp.task('obfuscate-app', function () {
         .pipe(rename('min.js'))                             //renaming the code
         .pipe(gulp.dest('www/app'));                        //place to www output directory
 });
+
+gulp.task('build', [ 'obfuscate-app']);
+
 ```
 
-Here only js files are collected and obfuscated. Similarly we can modify html and css/scss files.
+Here in this example, only js files are collected and obfuscated. Similarly we can modify html and css/scss files.
 
+* The gulp task can be invoked to generate obfuscated min.js into path www/ from terminal : 
+
+```sh
+gulp build
+```
+
+Attached sample gulpfile.js and generated min.js files in src folder for reference.
 
 
 ## 💖 Support
